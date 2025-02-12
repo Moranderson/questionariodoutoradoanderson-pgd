@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário PGDP na Saúde (FAIR)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            color: #444;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Questionário sobre Implantação e Utilidade do PGDP na Saúde (FAIR)</h1>
+        <form action="#" method="post">
+            <!-- Seção 1: Dados Demográficos -->
+            <h2>Seção 1: Dados Demográficos</h2>
+            <label for="area_atuacao">1. Qual é a sua área de atuação na saúde?</label>
+            <select id="area_atuacao" name="area_atuacao" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Pesquisa Clínica">Pesquisa Clínica</option>
+                <option value="Epidemiologia">Epidemiologia</option>
+                <option value="Saúde Pública">Saúde Pública</option>
+                <option value="Bioinformática">Bioinformática</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <label for="experiencia_pgdp">2. Qual é o seu nível de experiência com Planos de Gestão de Dados de Pesquisa (PGDP)?</label>
+            <select id="experiencia_pgdp" name="experiencia_pgdp" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Iniciante">Iniciante</option>
+                <option value="Intermediário">Intermediário</option>
+                <option value="Avançado">Avançado</option>
+                <option value="Nenhuma experiência">Nenhuma experiência</option>
+            </select>
+
+            <!-- Seção 2: Conhecimento sobre os Princípios FAIR -->
+            <h2>Seção 2: Conhecimento sobre os Princípios FAIR</h2>
+            <label for="familiaridade_fair">3. Você está familiarizado com os princípios FAIR (Findable, Accessible, Interoperable, Reusable)?</label>
+            <select id="familiaridade_fair" name="familiaridade_fair" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="principio_desafiador">4. Em sua opinião, qual dos princípios FAIR é o mais desafiador de implementar na área da saúde?</label>
+            <select id="principio_desafiador" name="principio_desafiador">
+                <option value="">Selecione uma opção</option>
+                <option value="Findable">Findable (Localizável)</option>
+                <option value="Accessible">Accessible (Acessível)</option>
+                <option value="Interoperable">Interoperable (Interoperável)</option>
+                <option value="Reusable">Reusable (Reutilizável)</option>
+                <option value="Não sei">Não sei</option>
+            </select>
+
+            <!-- Seção 3: Implantação do PGDP -->
+            <h2>Seção 3: Implantação do PGDP</h2>
+            <label for="pgdp_estabelecido">5. A sua instituição/equipe de pesquisa possui um Plano de Gestão de Dados de Pesquisa (PGDP) formalmente estabelecido?</label>
+            <select id="pgdp_estabelecido" name="pgdp_estabelecido" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+                <option value="Não sei">Não sei</option>
+            </select>
+
+            <label for="desafios_implantacao">6. Quais são os principais desafios enfrentados na implantação do PGDP na sua instituição/equipe?</label>
+            <textarea id="desafios_implantacao" name="desafios_implantacao" rows="4"></textarea>
+
+            <!-- Seção 4: Utilidade do PGDP -->
+            <h2>Seção 4: Utilidade do PGDP</h2>
+            <label for="qualidade_dados">7. Na sua experiência, o PGDP tem contribuído para a melhoria da qualidade dos dados de pesquisa na área da saúde?</label>
+            <select id="qualidade_dados" name="qualidade_dados" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Sim, significativamente">Sim, significativamente</option>
+                <option value="Sim, mas de forma limitada">Sim, mas de forma limitada</option>
+                <option value="Não">Não</option>
+                <option value="Não sei">Não sei</option>
+            </select>
+
+            <label for="colaboracao">8. O PGDP tem facilitado a colaboração entre diferentes instituições/equipes de pesquisa?</label>
+            <select id="colaboracao" name="colaboracao" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+                <option value="Não sei">Não sei</option>
+            </select>
+
+            <!-- Seção 5: Melhorias e Recomendações -->
+            <h2>Seção 5: Melhorias e Recomendações</h2>
+            <label for="melhorias">9. Quais melhorias você sugere para a implementação do PGDP na área da saúde?</label>
+            <textarea id="melhorias" name="melhorias" rows="4"></textarea>
+
+            <label for="transparencia_fair">10. Você acredita que a adoção dos princípios FAIR no PGDP pode aumentar a transparência e a reprodutibilidade na pesquisa em saúde?</label>
+            <select id="transparencia_fair" name="transparencia_fair" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+                <option value="Não sei">Não sei</option>
+            </select>
+
+            <!-- Seção 6: Comentários Finais -->
+            <h2>Seção 6: Comentários Finais</h2>
+            <label for="comentarios">11. Gostaria de adicionar algum comentário ou sugestão sobre a implantação e utilidade do PGDP na área da saúde?</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+            <!-- Botão de Envio -->
+            <input type="submit" value="Enviar Respostas">
+        </form>
+    </div>
+</body>
+</html>
